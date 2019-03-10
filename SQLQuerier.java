@@ -12,14 +12,13 @@ public class SQLQuerier {
     protected String command; //where SELECT or DROP would go in a query
     protected String table; //the table being queried
     protected String number; // the number of rows to request
-
     protected HashMap<String, String[]> qData;
-
     protected Socket qSock; //The socket that makes a connection to the server
     protected String host;
     protected int port;
 
-    public SQLQuerier(Socket qSock, String host, int port) throws IOException{
+
+    public SQLQuerier(String host, int port) throws IOException{
         this.host = host;
         this.port = port;
         try {
@@ -28,57 +27,86 @@ public class SQLQuerier {
         catch (IOException e){
             System.out.print("IOException");
         }
+        this.query = null;
     }
 
-    private void connect() throws IOException {
-        this.qSock = new Socket(this.host, this.port);
-        System.out.print("Socket connected");
-        }
 
-    protected void query(String command, String number, String table) throws IOException {
-        //query selected table for # of columns returned, then query the server for all data requested, using querySort to create a hashmap
+
+    protected ArrayList<HashMap> query(String command, String number, String table, String rowCount) throws IOException {
+        //query selected table for # of columns returned, then query the server for all data requested, using querySort to create an arraylist
+        ArrayList<String> respList = new ArrayList<String>();
+        ArrayList<HashMap> result = new ArrayList<>();
         PrintWriter sockOut = new PrintWriter(this.qSock.getOutputStream(), true);
         BufferedReader sockIn = new BufferedReader(new InputStreamReader(this.qSock.getInputStream())); // instantiates the printwriter and buffered reader used to send data through a socket
-
-        String response = "";
-        ArrayList<String> respList = new ArrayList<String>();
-
         int count = getColumnCount(sockOut, sockIn, table);
+        int respNum = count * Integer.parseInt(rowCount);
 
-        query = command + " " + number + " from " + table + " LIMIT 1;";
-        System.out.print(query);
-        sockOut.println(query);
+        //System.out.println(respNum);
+        this.setQuery(command + " " + number + " from " + table + " LIMIT " + rowCount + ";");
 
-        while(true){ //this shit is wonky, it doesn't seem to like when I run a check, it seems to miss part of the stream when I try to do a comparison
+        sockOut.println(this.query);
+        respList = getResponse(sockIn, respNum);
+        ArrayList<String> tableData = queryforTableData(sockOut, sockIn, table, count);
+       result = getFormattedData(respList, tableData);
+        return result;
+    }
 
-                response = sockIn.readLine();
-                if(response.equals("TERMINATE"))
-                    break;
+    protected ArrayList<String> queryforTableData(PrintWriter sockOut, BufferedReader sockIn, String table, int respNum) throws IOException{
+        ArrayList<String> tableData = new ArrayList<String>();
+        sockOut.println("SELECT column_name from information_schema.columns WHERE table_name = '" + table + "'");
+        tableData = getResponse(sockIn, respNum);
 
-                respList.add(response);
-                System.out.print(response + "\n");
-
-            }
-
-
-            //filterQuery(count, respList);
-
+        return tableData;
 
     }
 
-    private int getColumnCount(PrintWriter sockOut, BufferedReader sockIn, String table) throws IOException{
+
+    public ArrayList<String> getResponse(BufferedReader sockIn, int respNum) throws IOException{
+        ArrayList<String> respList = new ArrayList<String>();
+        String response;
+        for(int i = 0; i < respNum; i++){
+            response = sockIn.readLine();
+            if(response.contains("TERMINATE"))
+                continue;
+            respList.add(response);
+
+        }
+        return  respList;
+    }
+
+    protected int getColumnCount(PrintWriter sockOut, BufferedReader sockIn, String table) throws IOException{ // returns the number of columns
+        int count;
         try {
             sockOut.println("SELECT COUNT(*) from information_schema.columns WHERE table_name = '" + table + "' ");
-            return Integer.parseInt(sockIn.readLine());
+            count = Integer.parseInt(sockIn.readLine());
+                return count;
+
         }
         catch (Exception e){
             return 5;
         }
     }
 
-     public HashMap filterQuery(int columns, ArrayList<String> qResult){
-        //take the array of strings from the hashmap and using the number of columns from the table, break down the table with the first entry as the key and every other
-        // entry as the value in an array
-        return qData;
+    protected ArrayList<HashMap> getFormattedData(ArrayList<String> respList, ArrayList<String> tableData){
+        ArrayList<HashMap> result = new ArrayList<>();
+        Formatter formatter = new Formatter(respList, tableData);
+        result = formatter.getResult();
+        return result;
+
     }
+
+    private void connect() throws IOException { //connects us to the remote host
+        this.qSock = new Socket(this.host, this.port);
+        //System.out.print("Socket connected");
+    }
+
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
 }
