@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Inventory"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleHeader"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Title" />
+
+            <TextView
+                android:id="@+id/ratingHeader"
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:text="Rating" />
+
+            <TextView
+                android:id="@+id/lengthHeader"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="Length" />
+
+            <TextView
+                android:id="@+id/rateHeader"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="Rate($)" />
+
+            <TextView
+                android:id="@+id/stockHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock"
+
+
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:text="qq" />
+
+            <TextView
+                android:id="@+id/rating1"
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:text="R" />
+
+            <TextView
+                android:id="@+id/length1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="127" />
+
+            <TextView
+                android:id="@+id/rate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.99" />
+
+            <TextView
+                android:id="@+id/stock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating2"
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:text="PG" />
+
+            <TextView
+                android:id="@+id/length2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="127" />
+
+            <TextView
+                android:id="@+id/rate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.99" />
+
+            <TextView
+                android:id="@+id/stock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PG13" />
+
+            <TextView
+                android:id="@+id/length3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300" />
+
+            <TextView
+                android:id="@+id/rate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.99" />
+
+            <TextView
+                android:id="@+id/stock3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="452dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G" />
+
+            <TextView
+                android:id="@+id/length4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45" />
+
+            <TextView
+                android:id="@+id/rate4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.99" />
+
+            <TextView
+                android:id="@+id/stock4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="452dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/title5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G" />
+
+            <TextView
+                android:id="@+id/length5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200" />
+
+            <TextView
+                android:id="@+id/rate5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.50" />
+
+            <TextView
+                android:id="@+id/stock5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="452dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G" />
+
+            <TextView
+                android:id="@+id/length6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45" />
+
+            <TextView
+                android:id="@+id/rate6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.99" />
+
+            <TextView
+                android:id="@+id/stock6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="452dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G" />
+
+            <TextView
+                android:id="@+id/length7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45" />
+
+            <TextView
+                android:id="@+id/rate7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.99" />
+
+            <TextView
+                android:id="@+id/stock7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="452dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/rating8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G" />
+
+            <TextView
+                android:id="@+id/length8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45" />
+
+            <TextView
+                android:id="@+id/rate8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10.99" />
+
+            <TextView
+                android:id="@+id/stock8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:text="+ -"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="452dp" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
