@@ -338,7 +338,12 @@ public class MainActivity extends AppCompatActivity {
         change.execute();
 
         in = Integer.parseInt(t[row].getText().toString());
-        in++;
+
+        if(way == true)
+            in--;
+        else
+            in++;
+
         t[row].setText(Integer.toString(in));
 
         ProgressDialog dialog = ProgressDialog.show(this, "Loading", "Please wait...", true);
