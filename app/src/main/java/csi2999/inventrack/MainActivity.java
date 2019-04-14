@@ -346,9 +346,5 @@ public class MainActivity extends AppCompatActivity {
 
         t[row].setText(Integer.toString(in));
 
-        ProgressDialog dialog = ProgressDialog.show(this, "Loading", "Please wait...", true);
-
-        dialog.dismiss();
-
     }
 }
