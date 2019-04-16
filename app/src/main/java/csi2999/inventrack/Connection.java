@@ -13,9 +13,11 @@ import android.content.Context;
 public class Connection extends AsyncTask<Void, Void,ArrayList<HashMap>> {
 
 
+
+
+
     protected void onPreExecute(){
-        super.onPreExecute();
-        //System.out.println("Pre execution");
+
     }
     protected ArrayList<HashMap> doInBackground(Void... params){
         ArrayList<HashMap> qResult = new ArrayList<HashMap>();
@@ -31,5 +33,8 @@ public class Connection extends AsyncTask<Void, Void,ArrayList<HashMap>> {
         return qResult;
     }
 
+    protected void onPostExecute(ArrayList<HashMap> q){
+
+    }
 
 }

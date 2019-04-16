@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.net.Socket;
 import java.io.IOException;
@@ -119,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
         update.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -332,12 +334,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void incDec(int row, boolean way, TextView[] t){
-        change = new IncrementDecrement();
+        in = Integer.parseInt(t[row].getText().toString());
+
+        if((in < 1) && (way== true)){
+            Toast.makeText(MainActivity.this, "Cannot be less than 0", Toast.LENGTH_SHORT).show();
+
+            return;
+        }
+
+        change = new IncrementDecrement(this);
         change.setRow(row);
         change.setWay(way);
         change.execute();
 
-        in = Integer.parseInt(t[row].getText().toString());
+
 
         if(way == true)
             in--;

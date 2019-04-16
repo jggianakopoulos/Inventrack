@@ -1,5 +1,8 @@
 package csi2999.inventrack;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 
 import java.io.IOException;
@@ -9,6 +12,27 @@ import java.util.HashMap;
 public class IncrementDecrement extends AsyncTask<Void, Void, Void> {
     private int row = 0;
     private boolean way = false;
+    private ProgressDialog loading = null;
+    private Context theContext;
+
+    IncrementDecrement(Context context){
+        theContext = context;
+    }
+
+
+    protected void onPreExecute(){
+
+        loading = new ProgressDialog(theContext);
+        loading.setMessage("Accessing Server, Please Wait");
+        loading.show();
+        loading.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+    }
+
+
+    protected void onPostExecute(Void result){
+        loading.dismiss();
+    }
+
 
     protected Void doInBackground(Void... params){
         ArrayList<HashMap> qResult = new ArrayList<HashMap>();
@@ -33,6 +57,7 @@ public class IncrementDecrement extends AsyncTask<Void, Void, Void> {
         System.out.println(stock);
         return null;
     }
+
 
     public void setRow(int row){
         this.row = row;
