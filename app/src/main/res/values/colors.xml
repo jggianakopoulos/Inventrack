@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="layoutBackground">#343838</color>
+    <color name="selectBoxBG">#8A898F</color>
+    <color name="headerColor">#819A89</color>
+    <color name="titleHead">#737276</color>
 </resources>
