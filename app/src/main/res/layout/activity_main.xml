@@ -9,605 +9,614 @@
     tools:context=".MainActivity">
 
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="402dp"
-        android:layout_height="408dp"
-        android:layout_marginBottom="96dp"
-        android:background="@color/selectBoxBG"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:layout_width="401dp"
+        android:layout_height="419dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHead">
 
-        <TableRow
+        <TableLayout
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/titleHeader"
-                android:layout_width="144dp"
-                android:layout_height="wrap_content"
-                android:text="Title"
-
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/ratingHeader"
-                android:layout_width="51dp"
-                android:layout_height="wrap_content"
-                android:text="Rating"
-
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/lengthHeader"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:text="Length"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/rateHeader"
-                android:layout_width="56dp"
-                android:layout_height="wrap_content"
-                android:text="Rate($)"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/stockHeader"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inv."
-
-                android:textColor="#000000"
-                android:textStyle="bold"
-
-
-                />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/title1"
-                android:layout_width="134dp"
-                android:layout_height="wrap_content"
-                android:text="Movie 1"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating1"
-                android:layout_width="51dp"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="R"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="127"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate1"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="4.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="10"
-                android:textColor="#000000" />
-
-
-            <Button
-                android:id="@+id/add1"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract1"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title2"
-                android:layout_width="139dp"
-                android:layout_height="wrap_content"
-                android:text="Movie 2"
-
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating2"
-                android:layout_width="51dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="PG"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="127"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="1.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add2"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract2"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title3"
-                android:layout_width="158dp"
-                android:layout_height="wrap_content"
-
-                android:text="Movie 3"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="PG13"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="300"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="1.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="5"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add3"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract3"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Movie 4"
-
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="G"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="45"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="10.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add4"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract4"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Movie 5"
-
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="G"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:text="200"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="1.50"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12"
-
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add5"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract5"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Movie 6"
-
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="G"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="45"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="10.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add6"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract6"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Movie 7"
-
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="G"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="45"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="10.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add7"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract7"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Movie 8"
-
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rating8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="G"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/length8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="45"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/rate8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-
-                android:text="10.99"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/stock8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/add8"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="+"
-                tools:layout_editor_absoluteX="267dp"
-                tools:layout_editor_absoluteY="337dp" />
-
-            <Button
-                android:id="@+id/subtract8"
-                android:layout_width="32dp"
-                android:layout_height="40dp"
-                android:text="-"
-                tools:layout_editor_absoluteX="198dp"
-                tools:layout_editor_absoluteY="444dp" />
-
-        </TableRow>
-
-        <Button
-            android:id="@+id/update"
-            android:layout_width="393dp"
             android:layout_height="wrap_content"
-            android:text="Update Inventory"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="410dp"
-            tools:layout_editor_absoluteY="354dp" />
+            android:layout_marginBottom="24dp"
+            android:background="@color/selectBoxBG"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent">
 
-    </TableLayout>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleHeader"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ratingHeader"
+                    android:layout_width="51dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lengthHeader"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="Length"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rateHeader"
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rate($)"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stockHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inv."
+
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+
+
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="134dp"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 1"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating1"
+                    android:layout_width="51dp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="R"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="127"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate1"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="4.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="10"
+                    android:textColor="#000000" />
+
+
+                <Button
+                    android:id="@+id/add1"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract1"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 2"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating2"
+                    android:layout_width="51dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="PG"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="127"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="1.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add2"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract2"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Movie 3"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="PG13"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="300"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="1.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="5"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add3"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract3"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 4"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="G"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="45"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="10.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add4"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract4"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 5"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="G"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:text="200"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="1.50"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add5"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract5"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 6"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="G"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="45"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="10.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add6"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract6"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 7"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="G"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="45"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="10.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add7"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract7"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie 8"
+
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rating8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="G"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/length8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="45"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/rate8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="10.99"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/stock8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/add8"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="337dp" />
+
+                <Button
+                    android:id="@+id/subtract8"
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    tools:layout_editor_absoluteX="198dp"
+                    tools:layout_editor_absoluteY="444dp" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="393dp"
+                android:layout_height="wrap_content"
+                android:text="Update Inventory"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="410dp"
+                tools:layout_editor_absoluteY="354dp" />
+
+        </TableLayout>
+    </ScrollView>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="407dp"
-        android:layout_height="101dp"
+        android:layout_height="78dp"
         android:background="@color/headerColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -628,9 +637,10 @@
         android:id="@+id/titleHead"
         android:layout_width="402dp"
         android:layout_height="102dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="12dp"
         android:background="@color/titleHead"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header">
 
