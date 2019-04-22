@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("error");
         }
         
-        Collections.sort(qResult, new Comparator<HashMap>() {
+        Collections.sort(values, new Comparator<HashMap>() {
             @Override
             public int compare(HashMap o1, HashMap o2) {
                 return Integer.parseInt((String) o1.get("title")) - 
